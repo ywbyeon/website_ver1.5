@@ -6,7 +6,7 @@ subtitle: Postdoctoral Research Associate @LBNL
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: profile_picture.jpg
   image_circular: false # crops the image to make it circular
   address: # >
 #    <p>Building 33, Room 338P</p>

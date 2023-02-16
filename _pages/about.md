@@ -22,4 +22,6 @@ I am a Postdoctoral Research Associate, and I am broadly interested in synthesiz
 
 I hold a Ph.D. in Materials Sciences and Engineering from [Korea University](https://www.korea.ac.kr) (Seoul, South Korea). I have also been a Research Assistant at the [Advanced Analysis Center](https://aac.kist.re.kr) of the Korea Institute of Science and Technology ([KIST](https://www.kist.re.kr/eng)). I have had a multidisciplinary experience working with materials for electrochemical applications, including the alloying anodes (e.g., Si, Sn, and Sb), Fuel cells (PEMFC), and the composite cathodes in Li- and Na-ion batteries, and the solid electrolytes for all-solid-state Li metal batteries.
 
+<!---1
 Also I have been investigating the relationship between synthesis parameters and the material properties of the reaction product that control the activity and degradations of electrochemical reactions for energy storage materials. 
+-->

@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Postdoctoral Research Associate, Materials Sciences Division, Berkeley Lab (LBNL).
+subtitle: Postdoctoral Research Associate @LBNL
 
 profile:
   align: right

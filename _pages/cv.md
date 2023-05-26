@@ -1,7 +1,7 @@
 ---
 layout: cv
 permalink: /cv/
-title: Curriculum Vitae
+title: cv
 nav: true
 nav_order: 4
 cv_pdf: CV_YWByeon_202305.pdf

@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Postdoctoral Research Associate @LBNL
+subtitle: Postdoctoral Research Fellow @LBNL
 
 profile:
   align: right
@@ -18,7 +18,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a Postdoctoral Research Associate, and I am broadly interested in synthesizing/investigating/analyzing materials for energy storaging devices. My current work is focused on developing all-solid-state batteries that have both a long cycle life and a high energy density by designing and integrating materials. My expertise is in material analysis based on electron microscopy (TEM, FIB, and SEM) and X-ray analysis (XRD, XPS, and XANES). I am currently based in the Materials Sciences Division at [Lawrence Berkeley National Laboratory](https://www.lbl.gov) (Berkeley, CA, USA).
+I am a Postdoctoral Research Fellow, and I am broadly interested in synthesizing/investigating/analyzing materials for energy storaging devices. My current work is focused on developing all-solid-state batteries that have both a long cycle life and a high energy density by designing and integrating materials. My expertise is in material analysis based on electron microscopy (TEM, FIB, and SEM) and X-ray analysis (XRD, XPS, and XANES). I am currently based in the Materials Sciences Division at [Lawrence Berkeley National Laboratory](https://www.lbl.gov) (Berkeley, CA, USA).
 
 I hold a Ph.D. in Materials Sciences and Engineering from [Korea University](https://www.korea.ac.kr) (Seoul, South Korea). I have also been a Research Assistant in the [Advanced Analysis Center](https://aac.kist.re.kr/eng/index) at [Korea Institute of Science and Technology](https://eng.kist.re.kr/eng/) (KIST). I have had a multidisciplinary experience working with materials for electrochemical applications, including the alloying anodes (e.g., Si, Sn, and Sb), Fuel cells (PEMFC), and the composite cathodes in Li- and Na-ion batteries, and the solid electrolytes for all-solid-state Li metal batteries.
 

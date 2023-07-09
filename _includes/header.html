@@ -6,7 +6,7 @@
         <div class="container">
           {% if page.permalink != '/' -%}
           <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
-            <img style="display: inline-block; vertical-align: middle; padding-right: 0px; margin-bottom: 0px" src="{{ 'logo.png' | prepend: '/assets/img/' | prepend: site.baseurl | prepend: site.url }}" class="heightSet_navbar">
+            <img style="display: inline-block; max-height: 27px; vertical-align: middle; padding-right: 0px; margin-bottom: 0px" src="{{ 'logo.png' | prepend: '/assets/img/' | prepend: site.baseurl | prepend: site.url }}">
             {%- if site.title == "blank" -%}
               {%- if site.first_name -%}
                 <span class="font-weight-bold">{{- site.first_name -}}&nbsp;</span>

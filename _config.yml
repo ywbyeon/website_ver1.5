@@ -251,7 +251,7 @@ scholar:
   last_name: [Byeon]
   first_name: [Young-Woon]
 
-  style: apa
+  style: american-chemical-society
   locale: en
 
   source: /_bibliography/

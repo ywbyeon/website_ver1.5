@@ -142,10 +142,10 @@
             <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
           {%- endif %}
           {%- if entry.bibtex_show %}
-            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bibtex</a>
           {%- endif %}
           {%- if entry.html %}
-            <a href="{{ entry.html }}" class="btn btn-sm z-depth-0" role="button">HTML</a>
+            <a href="{{ entry.html }}" class="btn btn-sm z-depth-0" role="button">WEB</a>
           {%- endif %}
           {%- if entry.pdf %}
             {% if entry.pdf contains '://' -%}
@@ -188,10 +188,11 @@
           {% if site.badges %}
           <div class="badges">
           {%- if site.badges.altmetric_badge or entry.altmetric %}
-            <span class="altmetric-embed" {% if entry.doi %}data-doi="{{ entry.doi }}"{% else %}data-altmetric-id="{{ entry.altmetric }}"{% endif %} data-hide-no-mentions="true" data-hide-less-than="0" data-badge-type="donut" data-badge-popover="right"></span>
+            <span class="altmetric-embed" {% if entry.doi %}data-doi="{{ entry.doi }}"{% else %}data-altmetric-id="{{ entry.altmetric }}"{% endif %} data-hide-no-mentions="true" data-hide-less-than="0"></span>
+            <!-- data-badge-type="donut" data-badge-popover="right" -->
           {%- endif %}
           {%- if site.badges.dimensions_badge or entry.dimensions %}
-            <span class="__dimensions_badge_embed__" {% if entry.doi %}data-doi="{{ entry.doi }}"{% else if entry.pmid %}data-pmid="{{ entry.pmid }}"{% else %}data-id="{{ entry.dimensions }}"{% endif %} data-hide-zero-citations="true" data-style="small_circle" style=""></span><script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+            <span class="__dimensions_badge_embed__" {% if entry.doi %}data-doi="{{ entry.doi }}"{% else if entry.pmid %}data-pmid="{{ entry.pmid }}"{% else %}data-id="{{ entry.dimensions }}"{% endif %} data-hide-zero-citations="true" data-style="small_rectangle" style=""></span><script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
           {%- endif %}
           </div>
           {%- endif %}

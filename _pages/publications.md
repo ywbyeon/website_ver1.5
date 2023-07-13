@@ -13,10 +13,13 @@ Another References:  [<i class="fas fa-graduation-cap"></i> Google Scholar](http
 
 <!-- _pages/publications.md -->
 <div class="publications">
+  <h2 class="In Progress">{{y}}</h2>
+  {% bibliography -f papers -q @unpublished* %}
+</div>
 
+<div class="publications">
 {%- for y in page.years %}
   <h2 class="year">{{y}}</h2>
-  {% bibliography -f papers -q @*[year={{y}}]* %}
+  {% bibliography -f papers -q @article*[year={{y}}]* %}
 {% endfor %}
-
 </div>

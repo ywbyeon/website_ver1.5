@@ -12,14 +12,14 @@ Another References:  [<i class="fas fa-graduation-cap"></i> Google Scholar](http
 ***†: equal contribution, *: corresponding author***
 
 <!-- _pages/publications.md -->
-<div class="unpublished">
-  <h2 class="In Process">{{y}}</h2>
-  {% bibliography -f papers -q @unpublished* %}
-</div>
-
 <div class="publications">
-{%- for y in page.years %}
+  
+  <h2 class="Soon">{{y}}</h2>
+  {% bibliography -f papers -q @unpublished* %}
+
+  {%- for y in page.years %}
   <h2 class="year">{{y}}</h2>
   {% bibliography -f papers -q @article*[year={{y}}]* %}
-{% endfor %}
+  {% endfor %}
+
 </div>

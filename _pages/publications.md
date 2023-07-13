@@ -12,7 +12,7 @@ Another References:  [<i class="fas fa-graduation-cap"></i> Google Scholar](http
 ***†: equal contribution, *: corresponding author***
 
 <!-- _pages/publications.md -->
-<div class="publications">
+<div class="unpublished">
   <h2 class="In Progress">{{y}}</h2>
   {% bibliography -f papers -q @unpublished* %}
 </div>

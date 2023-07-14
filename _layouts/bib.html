@@ -118,7 +118,6 @@
           {%- if entry.volume -%}{%- capture entryvolume -%}<{{" "}}{{entry.pages}}{%- endcapture -%}{%- endif -%}
           {%- if entry.number -%}{%- capture entrynumber -%}<{{" ("}}{{entry.number}}{{ ")" }}{%- endcapture -%}{%- endif -%}
           {%- if entry.pages -%}{%- capture entrypages -%}<{{" pp."}}{{entry.pages | remove_first: "-"}}{%- endcapture -%}{%- endif -%}
-        {%- endif -%}
         {%- elsif proceedings contains entry.type -%}
           {%- capture entrytype -%}<em>In {{entry.booktitle}}</em> {%- endcapture -%}
         {%- elsif thesis contains entry.type -%}

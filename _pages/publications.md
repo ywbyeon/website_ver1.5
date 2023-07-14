@@ -7,7 +7,7 @@ years: [2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015]
 nav: true
 nav_order: 1
 ---
-Another References:  [<i class="fas fa-graduation-cap"></i> Google Scholar](https://scholar.google.com/citations?user={{ author.googlescholar }}),   [<i class="fab fa-researchgate"></i> ResearchGate](https://www.researchgate.net/profile/{{ research_gate_profile }}),   [<i class="fab fa-orcid"></i> ORCID](https://orcid.org/{{ orcid_id }})
+Another References:  [<i class="fas fa-graduation-cap"></i> Google Scholar](https://scholar.google.com/citations?user={{ author.googlescholar }}),   [<i class="fab fa-researchgate"></i> ResearchGate](https://www.researchgate.net/profile/Young-Woon-Byeon),   [<i class="fab fa-orcid"></i> ORCID](https://orcid.org/0000-0003-2684-7720)
 
 ***†: equal contribution, *: corresponding author***
 
@@ -17,9 +17,9 @@ Another References:  [<i class="fas fa-graduation-cap"></i> Google Scholar](http
   <h2 class="year">Soon</h2>
   {% bibliography -f papers -q @unpublished* %}
 
-  {%- for y in page.years %}
-  <h2 class="year">{{y}}</h2>
-  {% bibliography -f papers -q @article*[year={{y}}]* %}
+  {% for y in page.years %}
+    <h2 class="year">{{y}}</h2>
+    {% bibliography -f papers -q @article*[year={{y}}]* %}
   {% endfor %}
 
 </div>

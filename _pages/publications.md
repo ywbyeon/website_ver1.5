@@ -15,11 +15,11 @@ Another References:  [<i class="fas fa-graduation-cap"></i> Google Scholar](http
 <div class="publications">
   
   <h2 class="year">Soon</h2>
-  {% bibliography -f papers -q @unpublished* %}
+  {% bibliography -f papers -q @unpublished %}
 
   {% for y in page.years %}
     <h2 class="year">{{y}}</h2>
-    {% bibliography -f papers -q @article*[year={{y}}]* %}
+    {% bibliography -f papers -q @article[year={{y}}] %}
   {% endfor %}
 
 </div>

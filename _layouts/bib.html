@@ -5,7 +5,7 @@
       {%- if entry.type == "unpublished" -%} <!-- For unpublished work, not displaying the preview-->
         {%- assign coltype = "col-sm-10" -%}
       {%- else -%}
-        {%- assign coltype = "col-sm-8" -%}
+        {%- assign coltype = "col-sm-9" -%}
         <div class="col-sm-2 {% if entry.preview %}preview{% else %}abbr{% endif %}">
         {%- if entry.preview -%}
           {% if entry.preview contains '://' -%}
@@ -13,7 +13,9 @@
           {%- else -%}
             {%- assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' -%}
             {% include figure.html 
+            path=entry_path
             class="preview z-depth-1 rounded"
+            <!--zoomable=true-->
             alt=entry.preview -%}
           {%- endif -%}
         {%- elsif entry.abbr -%}

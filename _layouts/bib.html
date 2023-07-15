@@ -1,9 +1,8 @@
 ---
 ---
-{% assign unpublished = "unpublished,inprocess,inpreparation" | split: ',' %}
 <!-- _layouts/bib.html -->
       <div class="row">
-      {%- if unpublished contains entry.type -%} <!-- For unpublished work, not displaying the preview-->
+      {%- if entry.type == "unpublished" -%} <!-- For unpublished work, not displaying the preview-->
       {%- else -%}
         <div class="col-sm-2 {% if entry.preview %}preview{% else %}abbr{% endif %}">
         {%- if entry.preview -%}
@@ -12,7 +11,6 @@
           {%- else -%}
             {%- assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' -%}
             {% include figure.html 
-            path=entry_path 
             class="preview z-depth-1 rounded"
             alt=entry.preview -%}
           {%- endif -%}
@@ -31,7 +29,7 @@
       {%- endif -%}
 
         <!-- Entry bib key, if the bibtex is not published, use entire width of the column -->
-        <div id="{{entry.key}}" class="col-sm-8"> <!--class="{% if entry.type == "unpublished" %}{% else %}col-sm-8{% endif %}">-->
+        <div id="{{entry.key}}" class="{% if entry.type == "unpublished" %}col-sm-12{% else %}col-sm-8{% endif %}">
         <!-- Title -->
         <div class="title">{% if entry.num %}[{{entry.num}}]. {% endif %}{{entry.title}}</div>
         <!-- Author -->
@@ -118,13 +116,13 @@
           {%- if entry.volume -%}{%- capture entryvolume -%}<{{" "}}{{entry.pages}}{%- endcapture -%}{%- endif -%}
           {%- if entry.number -%}{%- capture entrynumber -%}<{{" ("}}{{entry.number}}{{ ")" }}{%- endcapture -%}{%- endif -%}
           {%- if entry.pages -%}{%- capture entrypages -%}<{{" pp."}}{{entry.pages | remove_first: "-"}}{%- endcapture -%}{%- endif -%}
+        {%- elsif entry.type == "unpublished" -%}
+          {%- capture entrytype -%}<em>{{entry.journal}}</em> {%- endcapture -%}
+          {%- if entry.status -%}{%- capture entrystatus -%}<{{" "}}{{entry.status}}{%- endcapture -%}{%- endif -%}
         {%- elsif proceedings contains entry.type -%}
           {%- capture entrytype -%}<em>In {{entry.booktitle}}</em> {%- endcapture -%}
         {%- elsif thesis contains entry.type -%}
           {%- capture entrytype -%}<em>{{entry.school}}</em> {%- endcapture -%}
-        {%- elsif unpublished contains entry.type -%}
-          {%- capture entrytype -%}<em>{{entry.journal}}</em> {%- endcapture -%}
-          {%- if entry.status -%}{%- capture entrystatus -%}<{{" "}}{{entry.status}}{%- endcapture -%}{%- endif -%}
         {%- else -%}
           {%- capture entrytype -%}{%- endcapture -%}
           {%- if entry.pages -%}{%- capture entrypages -%}{{ " pp." }}{{ entry.pages }}{%- endcapture -%}{%- endif -%}

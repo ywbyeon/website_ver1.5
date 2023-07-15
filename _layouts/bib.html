@@ -5,7 +5,7 @@
       {%- if entry.type == "unpublished" -%} <!-- For unpublished work, not displaying the preview-->
         {%- assign coltype = "col-sm-10" -%}
       {%- else -%}
-        {%- assign coltype = "col-sm-9" -%}
+        {%- assign coltype = "col-sm-8" -%}
         <div class="col-sm-2 {% if entry.preview %}preview{% else %}abbr{% endif %}">
         {%- if entry.preview -%}
           {% if entry.preview contains '://' -%}

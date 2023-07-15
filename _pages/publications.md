@@ -7,7 +7,7 @@ years: [2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015]
 nav: true
 nav_order: 1
 ---
-Another References:  [<i class="fas fa-graduation-cap"></i> Google Scholar](https://scholar.google.com/citations?user={{ author.googlescholar }}),   [<i class="fab fa-researchgate"></i> ResearchGate](https://www.researchgate.net/profile/Young-Woon-Byeon),   [<i class="fab fa-orcid"></i> ORCID](https://orcid.org/0000-0003-2684-7720)
+Another References:  <i class="fas fa-graduation-cap"></i>&nbsp;Google Scholar(https://scholar.google.com/citations?user=kEQgiVoAAAAJ){: .btn .btn-sm .z-depth-0:},   <i class="fab fa-researchgate"></i>&nbsp;ResearchGate(https://www.researchgate.net/profile/Young-Woon-Byeon{: .btn .btn-sm .z-depth-0:},   <i class="fab fa-orcid"></i>&nbsp;ORCID(https://orcid.org/0000-0003-2684-7720){: .btn .btn-sm .z-depth-0:}
 
 ***†: equal contribution, *: corresponding author***
 

@@ -3,7 +3,9 @@
 <!-- _layouts/bib.html -->
       <div class="row">
       {%- if entry.type == "unpublished" -%} <!-- For unpublished work, not displaying the preview-->
+        {%- assign coltype = "col-sm-10" -%}
       {%- else -%}
+        {%- assign coltype = "col-sm-8" -%}
         <div class="col-sm-2 {% if entry.preview %}preview{% else %}abbr{% endif %}">
         {%- if entry.preview -%}
           {% if entry.preview contains '://' -%}
@@ -28,12 +30,8 @@
         </div>
       {%- endif -%}
 
-    <!-- Entry bib key, if the bibtex is not published, use entire width of the column -->
-      {%- if entry.type == "unpublished"}
-      <div id="{{entry.key}}" class="col-sm-10">
-      {%- else -%}
-      <div id="{{entry.key}}" class="col-sm-8">
-      {%- endif -%}
+      <!-- Entry bib key, if the bibtex is not published, use entire width of the column -->
+      <div id="{{ entry.key }}" class="{{ coltype }}">
         <!-- Title -->
         <div class="title">{% if entry.num %}[{{entry.num}}]. {% endif %}{{entry.title}}</div>
         <!-- Author -->
@@ -116,25 +114,29 @@
         {% assign proceedings = "inproceedings,incollection" | split: ','%}
         {% assign thesis = "thesis,mastersthesis,phdthesis" | split: ','%}
         {% if entry.type == "article" -%}
-          {%- capture entrytype -%}<em>{{entry.journal}}</em> {%- endcapture -%}
-          {%- if entry.volume -%}{%- capture entryvolume -%}<{{" "}}{{entry.pages}}{%- endcapture -%}{%- endif -%}
-          {%- if entry.number -%}{%- capture entrynumber -%}<{{" ("}}{{entry.number}}{{ ")" }}{%- endcapture -%}{%- endif -%}
-          {%- if entry.pages -%}{%- capture entrypages -%}<{{" pp."}}{{entry.pages | remove_first: "-"}}{%- endcapture -%}{%- endif -%}
+          {%- capture entryvenue -%}<strong><em>{{ entry.journal }}</em></strong>{%- endcapture -%}
+          {%- if entry.volume -%}{%- capture entryvolume -%},&nbsp;{{ entry.volume }}{%- endcapture -%}{%- endif -%}
+          {%- if entry.number -%}{%- capture entrynumber -%}&nbsp;({{ entry.number }}){%- endcapture -%}{%- endif -%}
+          {%- if entry.pages -%}{%- capture entrypages -%},&nbsp;{{entry.pages | remove_first: "-"}}{%- endcapture -%}{%- endif -%}
+          {%- if entry.year -%}{%- capture entryyear -%}&nbsp;({{ entry.year }}){%- endcapture -%}{%- endif -%}
+          <!-- {%- assign entryvenue_text = entryvenue | strip_html | strip -%} -->
+          {%- capture periodical -%}{{ entryvenue }}{{ entryvolume }}{{ entrynumber }}{{ entrypages }}{{ entryyear }}{%- endcapture -%}
         {%- elsif entry.type == "unpublished" -%}
-          {%- capture entrytype -%}<em>{{entry.journal}}</em> {%- endcapture -%}
-          {%- if entry.status -%}{%- capture entrystatus -%}<{{" "}}{{entry.status}}{%- endcapture -%}{%- endif -%}
+          {%- capture entryvenue -%}<strong><em>{{entry.journal}}</em></strong>{%- endcapture -%}
+          {%- if entry.status -%}{%- capture entrystatus -%},&nbsp;{{entry.status}}{%- endcapture -%}{%- endif -%}
+          {%- if entry.year -%}{%- capture entryyear -%}&nbsp;({{ entry.year }}){%- endcapture -%}{%- endif -%}
+          {%- capture periodical -%}{{ entryvenue }}{{ entrystatus }}{{ entryyear }}{%- endcapture -%}
         {%- elsif proceedings contains entry.type -%}
-          {%- capture entrytype -%}<em>In {{entry.booktitle}}</em> {%- endcapture -%}
+          {%- capture entryvenue -%}<em>In {{entry.booktitle}}</em> {%- endcapture -%}
         {%- elsif thesis contains entry.type -%}
-          {%- capture entrytype -%}<em>{{entry.school}}</em> {%- endcapture -%}
+          {%- capture entryvenue -%}<em>{{entry.school}}</em> {%- endcapture -%}
         {%- else -%}
-          {%- capture entrytype -%}{%- endcapture -%}
+          {%- capture entryvenue -%}{%- endcapture -%}
           {%- if entry.pages -%}{%- capture entrypages -%}{{ " pp." }}{{ entry.pages }}{%- endcapture -%}{%- endif -%}
           <!-- {%- if entry.month -%}{%- capture entrymonth -%}{{ " " }}{{ entry.month | capitalize }}{%- endcapture -%}{%- endif -%} -->
           {%- if entry.year -%}{%- capture entryyear -%}{{ " " }}{{entry.year}}{%- endcapture -%}{%- endif -%}
         {%- endif -%}
-        {% assign entrytype_text = entrytype | strip_html | strip %}
-        {%- capture periodical -%}{{ entrytype }}{%- if entrytype_text != "" and entryyear != "" -%}, {%- endif -%}{{ entrymonth }}{{ entryyear }}{%- endcapture -%}
+
         <div class="periodical">
           {{ periodical | strip }}
         </div>

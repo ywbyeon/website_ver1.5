@@ -7,7 +7,7 @@ years: [2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015]
 nav: true
 nav_order: 1
 ---
-Another References:  <a href="https://scholar.google.com/citations?user=kEQgiVoAAAAJ" class="btn btn-sm z-depth-0" role="button"><i class="fas fa-graduation-cap"></i>&nbsp;Google Scholar</a><a href="https://www.researchgate.net/profile/Young-Woon-Byeon" class="btn btn-sm z-depth-0" role="button"><i class="fab fa-researchgate"></i>&nbsp;ResearchGate</a><a href="https://orcid.org/0000-0003-2684-7720" class="btn btn-sm z-depth-0" role="button"><i class="fab fa-orcid"></i>&nbsp;ORCiD</a>
+Another References:  <a href="https://scholar.google.com/citations?user=kEQgiVoAAAAJ" class="btn btn-sm z-depth-0" role="button"><i class="ai google-scholar"></i>&nbsp;Google Scholar</a><a href="https://www.researchgate.net/profile/Young-Woon-Byeon" class="btn btn-sm z-depth-0" role="button"><i class="ai researchgate"></i>&nbsp;ResearchGate</a><a href="https://orcid.org/0000-0003-2684-7720" class="btn btn-sm z-depth-0" role="button"><i class="ai orcid"></i>&nbsp;ORCiD</a>
 
 ***†: equal contribution, *: corresponding author***
 

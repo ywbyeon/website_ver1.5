@@ -144,6 +144,11 @@
         <div class="periodical">
           {{ entry.note | strip }}
         </div>
+        {%- if entry.doi -%}
+        <div class="periodical">
+          <a href="{{ entry.url }}"><i class="ai doi"></i>{{ entry.doi }}</a></a>
+        </div>
+        {%- endif -%}
 
           <!-- Links/Buttons -->
           <div class="links">

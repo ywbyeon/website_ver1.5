@@ -31,7 +31,7 @@
       {%- endif -%}
 
         <!-- Entry bib key, if the bibtex is not published, use entire width of the column -->
-        <div id="{{entry.key}}" class="{% if unpublished contains entry.type -%}{-% else -%}col-sm-8{%- endif -%}">
+        <div id="{{entry.key}}" class="col-sm-8"> <!--class="{% if entry.type == "unpublished" %}{% else %}col-sm-8{% endif %}">-->
         <!-- Title -->
         <div class="title">{% if entry.num %}[{{entry.num}}]. {% endif %}{{entry.title}}</div>
         <!-- Author -->

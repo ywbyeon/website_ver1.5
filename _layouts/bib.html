@@ -209,7 +209,7 @@
           {% if site.badges %}
             <div class="badges">
             {%- if site.badges.altmetric_badge or entry.altmetric %}
-              <span class="altmetric-embed" {% if entry.doi %}data-doi="{{ entry.doi }}"{% else %}data-altmetric-id="{{ entry.altmetric }}"{% endif %} data-badge-popover='left'data-hide-no-mentions="false" data-hide-less-than="0"></span>
+              <span class="altmetric-embed" {% if entry.doi %}data-doi="{{ entry.doi }}"{% else %}data-altmetric-id="{{ entry.altmetric }}"{% endif %} data-badge-popover='left' data-hide-no-mentions="false" data-hide-less-than="0"></span>
               <!-- data-badge-type="donut" data-badge-popover="right" -->
             {%- endif %}
             {%- if site.badges.dimensions_badge or entry.dimensions %}

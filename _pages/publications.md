@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /publications/
-title: papers
+title: Papers
 description:
 years: [2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015]
 nav: true
@@ -16,7 +16,7 @@ Another References:  <a href="https://scholar.google.com/citations?user=kEQgiVoA
 <!-- _pages/publications.md -->
 <div class="publications">
   
-  <h2 class="year">Soon</h2>
+  <h2 class="year">In Process</h2>
   {% bibliography -f papers -q @unpublished %}
 
   {% for y in page.years %}

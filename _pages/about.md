@@ -32,10 +32,6 @@ At KIST, my work revolves around developing cutting-edge analysis techniques, wi
 
 I firmly believe in the power of collaboration and interdisciplinary research. The complex challenges of today's world require a synergistic approach, combining knowledge from different fields to achieve breakthroughs. I am always open to collaborative opportunities and discussions that can lead to new insights and discoveries.
 
-### Beyond the Lab
-
-Outside the lab, I am an avid reader and enjoy exploring the latest advancements in science and technology. I also enjoy mentoring young scientists and engaging in community outreach programs to foster a love for science in the next generation.
-
 ### Let's Connect
 
 I am enthusiastic about connecting with fellow researchers, industry professionals, and anyone interested in materials science and electron microscopy. Feel free to contact me for collaborations, discussions, or even a casual chat about science.
